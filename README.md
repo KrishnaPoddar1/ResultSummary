@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Repo URL](https://github.com/KrishnaPoddar1/ResultSummary.git)
+- Live Site URL: [Live site URL ]( https://krishnapoddar1.github.io/ResultSummary/)
 
 ## My process
 
