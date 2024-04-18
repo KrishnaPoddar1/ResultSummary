@@ -1,0 +1,211 @@
+@font-face {
+    font-family:"light" ;
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+    font-variation-settings: "wght" 500;
+}
+
+@font-face {
+    font-family:"regular" ;
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+    font-variation-settings: "wght" 700;
+}
+
+@font-face {
+    font-family:"bold" ;
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+    font-variation-settings: "wght" 800;
+}
+
+:root {
+    
+    --primary-lightRed: hsl(0, 100%, 67%);
+    --primary-orangeyYellow: hsl(39, 100%, 56%);
+    --primary-greenTeal: hsl(166, 100%, 37%);
+    --primary-cobaltBlue: hsl(234, 85%, 45%);
+
+    --gradients-lightSlateBlueBackground: hsl(252, 100%, 67%);
+    --gradients-lightRoyalBlueBackground: hsl(241, 81%, 54%);
+    --gradients-violetBlueCircle: hsla(256, 72%, 46%, 1);
+    --gradients-persianBlueCircle: hsla(241, 72%, 46%, 0);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-paleBlue: hsl(221, 100%, 96%);
+    --neutral-lightLavender: hsl(241, 100%, 89%);
+    --neutral-darkGrayBlue: hsl(224, 30%, 27%);
+
+    --fontSize-para: 18px;
+    --ff-light: "light";
+    --ff-regular:"regular";
+    --ff-bold: "bold";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--ff-regular);
+    font-size: var(--fontSize-para);
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card1 {
+    background-color: var(--gradients-lightRoyalBlueBackground);
+    color: var(--neutral-white);
+    border: 1px solid var(--gradients-lightRoyalBlueBackground);
+    border-radius:0 0 2rem 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.light {
+    font-family: var(--ff-light);
+    color: var(--neutral-lightLavender);
+}
+
+.box {
+    /*border: 1px solid var(--gradients-violetBlueCircle);*/
+    border-radius: 50%;
+    padding: 1rem 3rem;
+    background-image:linear-gradient(to bottom, var(--gradients-violetBlueCircle) 99%,transparent 1%);
+    transition: scale ease-in-out 1s;
+}
+
+.box h2 {
+    text-align: center;
+    
+}
+
+.para {
+    width: 80%;
+    text-align: center;
+    margin-top: -0.2rem;
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem 2rem;
+    
+}
+
+.results {
+    
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr 0.3fr;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.results img{
+    justify-self:center ;
+}
+
+.results p {
+    justify-self: flex-start;
+    color: var(--neutral-darkGrayBlue);
+    transition: scale ease-in-out 1s;
+}
+
+.bold {
+    color: black;
+}
+
+#Reaction {
+    background-color: rgba(250, 177, 177,0.2);
+}
+
+#Reaction h4 {
+    color: var(--primary-lightRed);
+}
+
+#Memory {
+    background-color: rgba(255, 255, 78, 0.336);
+}
+
+#Memory h4 {
+    color: var(--primary-orangeyYellow);
+}
+
+#Verbal {
+    background-color: rgba(89, 253, 89, 0.267);
+}
+
+#Verbal h4 {
+    color: var(--primary-greenTeal);
+}
+
+#Visual {
+    background-color: rgba(227, 227, 255, 0.856);
+}
+
+#Visual h4 {
+    color: var(--primary-cobaltBlue);
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: black;
+    color: var(--neutral-white);
+}
+
+button:hover {
+    background-color: var(--gradients-lightRoyalBlueBackground);
+    border-color: var(--gradients-lightRoyalBlueBackground);
+    cursor: pointer;
+}
+
+.results:hover, .box:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+@media screen and (min-width:768px) {
+    .card{
+        flex-direction: row;
+        width: 50%;
+        border-radius: 2rem;
+        box-shadow: 5px 15px 10px rgb(228, 227, 227);
+    }
+
+    .card1 {
+        border-radius: 2rem;
+        width: 50%;
+    }
+
+    .card2 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: 50%;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
